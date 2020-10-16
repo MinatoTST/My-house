@@ -55,7 +55,7 @@ public class Picture
         roof.moveHorizontal(20);
         roof.moveVertical(-60);
         roof.makeVisible();
-
+                
         sun = new Circle();
         sun.changeColor("yellow");
         sun.moveHorizontal(100);
@@ -78,7 +78,16 @@ public class Picture
             sun.changeColor("black");
         }
     }
-
+    /**
+     * Change this picture to black/white display
+     */
+    public void Atardecer()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+           sun.slowMoveVertical(80);
+        }
+    }
     /**
      * Change this picture to use color display
      */
