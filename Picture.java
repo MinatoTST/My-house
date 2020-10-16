@@ -16,6 +16,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Person persona;
 
     /**
      * Constructor for objects of class Picture
@@ -81,11 +82,16 @@ public class Picture
     /**
      * Change this picture to black/white display
      */
-    public void Atardecer()
+    public void atardecer()
     {
         if (wall != null)   // only if it's painted already...
         {
-           sun.slowMoveVertical(80);
+        sun.slowMoveVertical(80);
+        persona = new Person();
+        persona.moveHorizontal(250);
+        persona.moveVertical(40);
+        persona.makeVisible();
+        persona.slowMoveHorizontal(-270);
         }
     }
     /**
